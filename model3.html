@@ -45,14 +45,19 @@
 
             <!-- Centered Video Section -->
             <section class="centered-video-section">
-                <iframe src="https://www.youtube.com/embed/tttk9rt0PlM" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                <iframe
+                src="https://www.youtube.com/embed/EpcktCwUyjo?autoplay=1&controls=0"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen>
+                </iframe>
             </section>
 
         </section>
 
         <!-- Hidden Video Popup (appears on button click) -->
         <div class="video-popup" id="videoPopup">
-            <iframe id="videoIframe" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe id="videoIframe" src="https://youtu.be/0l0e9C6yErI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             <button class="close-btn" onclick="closeVideoPopup()">Close</button>
         </div>
     </main>
@@ -77,15 +82,5 @@
         document.getElementById("videoPopup").style.display = "none";
     }
 </script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
-    <script>
-        const socket = io.connect('http://raspberrypi.local:5000'); // Connect to the Flask-SocketIO server
-
-        // Listen for 'triggerFullscreen' event from the server
-        socket.on('triggerFullscreen', () => {
-            showVideoPopup();
-        });
-    </script>
 </body>
 </html>
