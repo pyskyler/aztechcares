@@ -1,0 +1,295 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    overflow-y: auto;  /* Enable vertical scrolling */
+}
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+    overflow-x: hidden;  /* Prevent horizontal scrolling */
+}
+
+/* Navigation styling */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dddddd;
+}
+
+.logo {
+    position: absolute;
+    left: 20px;
+    height: 24px;
+}
+
+.logo-img {
+    height: 36px;
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-family: 'Sen', sans-serif;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+/* Main Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    font-family: 'Sen', sans-serif;
+    font-weight: 500;
+    font-size: 2.5em;
+    color: whitesmoke;
+    text-transform: lowercase;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15vh; /* Full viewport height */
+    background-size: cover;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+    background: linear-gradient(to top, #e8eaf6, rgba(0, 0, 0, 0)) center;
+
+}
+
+.hero h1::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #007bff;
+    margin: 20px auto 0;
+}
+
+
+.hero .cta-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px #e8eaf6;
+}
+
+
+
+.hero h1 {
+    font-size: 42px;
+    color: #333;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: .5; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero p {
+    font-size: 27px;
+    color: #666666;
+    margin-top: 10px;
+}
+
+/* Robot Models Section */
+.robot-models {
+    padding: 0;  /* Remove extra padding */
+}
+
+.models-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.model-card {
+    text-align: center;
+    padding-top: 0;  /* Increase padding for height */
+    padding-bottom: 30px;
+    background-color: #f0f0f0;
+    border-bottom: 2px solid #dddddd;  /* Add a border to separate sections */
+}
+
+.model-card:nth-child(odd) {
+    background-color: #e8eaf6;
+}
+
+.model-card h3 {
+    font-size: 48px;
+    color: #333333;
+    font-family: 'Sen', sans-serif;
+}
+
+.headshots img {
+    width: 300px;  /* Larger headshots */
+    height: 400px;
+    object-fit: cover;
+    margin: 10px;
+}
+
+.learn-more {
+    margin-top: 30px;
+    padding: 18px 36px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 15px 20px;
+    border-top: 1px solid #dddddd;
+    color: #666666;
+    font-size: 14px;
+}
+
+/* Fullscreen Video Section Styling */
+.video-popup {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.video-popup iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.video-popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.video-popup .close-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Centered Video Section Styling */
+.centered-video-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.centered-video-section iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+}
+
+/* General Layout and Spacing */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+main {
+    padding: 20px;
+}
+
+.robot-details {
+    text-align: center;
+}
+
+.robot-details h1 {
+font-size: 48px;
+color: #333333;
+font-family: 'Sen', sans-serif;
+}
+
+.robot-images {
+    position: relative;
+    width: 400px; /* Fixed width */
+    height: auto; /* Keep height proportional to content */
+}
+
+.carousel-container {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 400px; /* Ensure it fills the container */
+}
+
+.carousel {
+    display: flex;
+    width: 400px; /* 3 images * 400px (width of each image) */
+}
+
+.carousel img {
+    width: 400px; /* Fixed width for each image */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the image covers the space without distortion */
+}
+
+.carousel-container button {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}

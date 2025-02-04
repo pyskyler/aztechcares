@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Model C - AZTech</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo"><img src="assets/aztech.png" alt="" class="logo-img"/></div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Industries</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Robot Model C Details -->
+    <main>
+        <section class="robot-details">
+            <h1>IRIS A.2</h1>
+            <div style="display: flex; align-items: center; gap: 20px; padding: 0 200px">
+
+            <p style="flex: 1;">This is the advanced humanoid robot designed for medical assistance, able to perform complex tasks and communicate with patients seamlessly. It is a blend of cutting-edge robotics and AI, offering unparalleled service in the healthcare industry.</p>
+
+                <div class="robot-images">
+                    <div class="carousel-container">
+                        <button class="prev">&#10094;</button>
+                        <div class="carousel">
+                            <img src="images/robots/model1-1.jpg" alt="Robot Model C - View 1">
+                        </div>
+                        <button class="next">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Centered Video Section -->
+            <section class="centered-video-section">
+                <iframe src="https://www.youtube.com/embed/tttk9rt0PlM" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+            </section>
+
+        </section>
+
+        <!-- Hidden Video Popup (appears on button click) -->
+        <div class="video-popup" id="videoPopup">
+            <iframe id="videoIframe" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <button class="close-btn" onclick="closeVideoPopup()">Close</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 AZTech Inc. All rights reserved.</p>
+    </footer>
+
+<script>
+    // Function to show the video popup
+    function showVideoPopup() {
+        const iframe = document.getElementById("videoIframe");
+        iframe.src += "?autoplay=1";
+        document.getElementById("videoPopup").style.display = "flex";
+    }
+
+    // Function to close the video popup
+    function closeVideoPopup() {
+        const iframe = document.getElementById("videoIframe");
+        iframe.src = iframe.src.replace("?autoplay=1", "");
+        document.getElementById("videoPopup").style.display = "none";
+    }
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+    <script>
+        const socket = io.connect('http://raspberrypi.local:5000'); // Connect to the Flask-SocketIO server
+
+        // Listen for 'triggerFullscreen' event from the server
+        socket.on('triggerFullscreen', () => {
+            showVideoPopup();
+        });
+    </script>
+</body>
+</html>
