@@ -28,11 +28,18 @@
     <main>
         <section class="robot-details">
             <h1>IRIS A.2</h1>
-            <div style="display: flex; align-items: center; gap: 20px; padding: 0 200px">
-
-            <p style="flex: 1;">This is the advanced humanoid robot designed for medical assistance, able to perform complex tasks and communicate with patients seamlessly. It is a blend of cutting-edge robotics and AI, offering unparalleled service in the healthcare industry.</p>
-
-                <div class="robot-images">
+            <div style="display: flex; align-items: center; gap: 20px; padding: 0 200px;">
+                <!-- Video Container -->
+                <div style="flex: 1; position: relative;">
+                        <iframe style="width: 100%; height: 100%; aspect-ratio: 16 / 9; border: none;"
+                            src="https://iframe.mediadelivery.net/embed/379583/eae948bb-ab35-41ef-af89-63485b7f18dc?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
+                            loading="lazy"
+                            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                            allowfullscreen="true" >
+                        </iframe>
+                </div>
+                <!-- Carousel Container -->
+                <div class="robot-images" style="flex: 1;">
                     <div class="carousel-container">
                         <button class="prev">&#10094;</button>
                         <div class="carousel">
@@ -42,23 +49,20 @@
                     </div>
                 </div>
             </div>
+        </section>
 
             <!-- Centered Video Section -->
             <section class="centered-video-section">
-                <iframe
-                src="https://www.youtube.com/embed/EpcktCwUyjo?autoplay=1&controls=0"
-                frameborder="0"
-                allow="autoplay; encrypted-media"
-                allowfullscreen>
-                </iframe>
-            </section>
 
-        </section>
+            </section>
 
         <!-- Hidden Video Popup (appears on button click) -->
         <div class="video-popup" id="videoPopup">
-            <iframe id="videoIframe" src="https://youtu.be/0l0e9C6yErI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            <button class="close-btn" onclick="closeVideoPopup()">Close</button>
+            <iframe src="https://iframe.mediadelivery.net/embed/379583/0c5e8f30-832e-4e43-a5e3-e5c90d258097?loop=false&muted=false&preload=true&responsive=false"
+                    loading="lazy" style="border:none;pointer-events: none;position:absolute;top:0;height:100%;width:100%;"
+                    allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
+                    allowfullscreen="true">
+            </iframe>
         </div>
     </main>
 
@@ -70,8 +74,8 @@
 <script>
     // Function to show the video popup
     function showVideoPopup() {
-        const iframe = document.getElementById("videoIframe");
-        iframe.src += "?autoplay=1";
+        const iframe = document.getElementById("videoPopup");
+        iframe.src += "?autoplay=true";
         document.getElementById("videoPopup").style.display = "flex";
     }
 
@@ -81,6 +85,9 @@
         iframe.src = iframe.src.replace("?autoplay=1", "");
         document.getElementById("videoPopup").style.display = "none";
     }
+
+    // Show the video popup after 26 seconds
+    setTimeout(showVideoPopup, 26000);
 </script>
 </body>
 </html>

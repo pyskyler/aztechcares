@@ -174,23 +174,26 @@ footer {
 }
 
 /* Fullscreen Video Section Styling */
+/* Fullscreen Video Section Styling */
 .video-popup {
     display: none; /* Initially hidden */
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 90vh;
+    top: 50%;
+    left: 50%;
+    width: 75vw; /* 75% of viewport width */
+    height: 75vh; /* 75% of viewport height */
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 1000;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    transform: translate(-50%, -50%); /* Centers it */
 }
 
 .video-popup iframe {
     width: 100%;
     height: 100%;
+    pointer-events: auto; /* Ensures interaction works */
 }
 
 .video-popup .close-btn {
@@ -209,18 +212,6 @@ footer {
     background-color: #0056b3;
 }
 
-/* Centered Video Section Styling */
-.centered-video-section {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.centered-video-section iframe {
-    width: 100%;
-    max-width: 800px;
-    height: 450px;
-}
 
 /* General Layout and Spacing */
 body {
