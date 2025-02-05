@@ -284,3 +284,11 @@ button:hover {
 .next {
     right: 10px;
 }
+
+.product-description {
+    text-align: center;
+    margin: 40px auto; /* Adds space above and below, and centers horizontally */
+    padding: 0 200px; /* Adds left and right margins */
+    line-height: 1.5;
+    font-size: 18px;
+}
