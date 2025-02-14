@@ -18,7 +18,6 @@ body {
     overflow-x: hidden;  /* Prevent horizontal scrolling */
 }
 
-/* Navigation styling */
 header {
     display: flex;
     justify-content: center;
@@ -26,6 +25,42 @@ header {
     padding: 20px;
     background-color: #f8f9fa;
     border-bottom: 1px solid #dddddd;
+}
+
+/* Ensure the nav takes up the full width of the header */
+nav {
+    width: 100%;
+}
+
+/* Center the list items horizontally */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-family: 'Sen', sans-serif;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.cart-icon {
+    margin-left: auto;
+}
+
+.cart-icon img {
+    width: 24px;
+    height: 24px;
 }
 
 .logo {
@@ -37,24 +72,6 @@ header {
 .logo-img {
     height: 36px;
     width: auto;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    font-family: 'Sen', sans-serif;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333333;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #007bff;
 }
 
 /* Main Hero Section */
@@ -427,6 +444,27 @@ button:hover {
 
 .more {
     color: gray;
+}
+
+/* Blur effect for the background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Start with no background */
+    backdrop-filter: blur(0); /* Start with no blur */
+    transition: backdrop-filter 0.2s ease, background 0.2s ease; /* Animate blur and background */
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Apply blur and dark overlay when the body has the 'blurred' class */
+body.blurred::before {
+    backdrop-filter: blur(10px); /* Final blur intensity */
+    background: rgba(0, 0, 0, 0.5); /* Final dark overlay */
 }
 
 @keyframes fadeIn {

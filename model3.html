@@ -21,7 +21,9 @@
                 <li><a href="#">Industries</a></li>
                 <li><a href="/contact">Contact</a></li>
             </ul>
-        </nav>
+        </nav><div class="cart-icon">
+        <img src="assets/cart.png" alt="Cart">
+    </div>
     </header>
 
     <!-- Robot Model C Details -->
@@ -34,14 +36,11 @@
                 Introducing Iris A.2 – the next step in home care innovation, brought to you by Aztech.
                 Iris A.2 is a primary care bot designed to assist with the care of children, especially
                 those of primary school age. With its customizable features, Iris A.2 can adapt to your
-                family’s specific needs, providing personalized support and companionship.
-                <br><br>
-                While Iris A.2 specializes in child care, Aztech also offers a variety of robots designed
-                for geriatric care, recovery, and other caregiving... <u style="color: gray"> more</u>
+                family’s specific needs, providing... <u style="color: gray"> more</u>
             </div>
 
             <div class="product-price">
-                    <p>$1,499.99</p>
+                    <p>$14,999.99</p>
                         <div class="quantity-selector">
                             <label for="quantity">Quantity:</label>
                             <input type="number" id="quantity" name="quantity" min="1" value="1">
@@ -197,6 +196,7 @@
         const iframe = document.getElementById("videoPopup");
         iframe.src += "?autoplay=true";
         document.getElementById("videoPopup").style.display = "flex";
+        document.body.classList.add("blurred"); // Add the blur effect to the background
     }
 
     // Function to close the video popup
