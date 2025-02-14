@@ -9,6 +9,7 @@
 html, body {
     height: 100%;
     overflow-y: auto;  /* Enable vertical scrolling */
+    font-family: "noka", sans-serif;
     font-style: normal;
     font-weight: 300;
 }
@@ -17,6 +18,7 @@ body {
     background-color: #ffffff;
     color: #333333;
     overflow-x: hidden;  /* Prevent horizontal scrolling */
+    font-family: "noka", sans-serif;
     font-style: normal;
     font-weight: 300;
 }
@@ -82,8 +84,8 @@ nav a {
 /* Main Hero Section */
 .hero {
     text-align: center;
-    padding: 50px 20px;
-    font-weight: 500;
+    padding: 20px 10px;
+    font-weight: 300;
     font-size: 2.5em;
     color: whitesmoke;
     text-transform: lowercase;
@@ -104,13 +106,14 @@ nav a {
     display: block;
     width: 50px;
     height: 3px;
-    background-color: #007bff;
+    background-color: #9bdaea;
     margin: 20px auto 0;
+
 }
 
 
 .hero .cta-button:hover {
-    background-color: #0056b3;
+    background-color: #9bdaea;
     box-shadow: 0 4px 8px #e8eaf6;
 }
 
@@ -120,6 +123,10 @@ nav a {
     font-size: 42px;
     color: #333;
     animation: fadeIn 1s ease-out;
+    font-weight: 300;
+    font-family: "noka", sans-serif;
+    font-style: normal;
+
 }
 
 @keyframes fadeIn {
@@ -170,13 +177,16 @@ nav a {
 .learn-more {
     margin-top: 30px;
     padding: 18px 36px;
-    font-size: 18px;
-    background-color: #007bff;
-    color: #ffffff;
+    font-size: 16px;
+    background-color: #9bdaea;
+    color: #000000;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-weight: 300;
+    font-family: "noka", sans-serif;
+    font-style: normal;
 }
 
 .learn-more:hover {
@@ -255,8 +265,9 @@ color: #333333;
     text-align: center;
     margin: auto;
     margin-bottom: 10px;
+    font-weight: 600;
 }
-}
+
 
 .robot-images {
     position: relative;
@@ -333,7 +344,9 @@ button:hover {
   cursor: pointer;
   margin-bottom: 10px;
   transition: background-color 0.3s ease;
-    font-weight: 500;
+    font-weight: 600;
+    font-family: "noka", sans-serif;
+    font-style: normal;
 }
 
 .faq-question:hover {
@@ -391,8 +404,8 @@ button:hover {
 }
 
 .product-price p {
-    font-size: 2rem;
-    font-weight: 800;
+    font-size: 1.5rem;
+    font-weight: 600;
     color: #222;
     margin-bottom: 20px;
 }
