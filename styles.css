@@ -231,9 +231,13 @@ main {
 }
 
 .robot-details h1 {
-font-size: 48px;
 color: #333333;
 font-family: 'Sen', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10px;
+}
 }
 
 .robot-images {
@@ -288,7 +292,114 @@ button:hover {
 .product-description {
     text-align: center;
     margin: 40px auto; /* Adds space above and below, and centers horizontally */
-    padding: 0 200px; /* Adds left and right margins */
+    padding: 0 50px; /* Adds left and right margins */
     line-height: 1.5;
     font-size: 18px;
+    flex: 1;
+    color: #555;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 20px;
+  font-size: 18px;
+  background-color: #9bdaea;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+    font-family: 'Gotham', sans-serif;
+    font-weight: bold;
+}
+
+.faq-question:hover {
+  background-color: #bee4ec;
+}
+
+.faq-answer {
+  padding: 15px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+
+.heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.robot-details {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.product-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.product-image {
+    flex: 1;
+    max-width: 400px;
+}
+
+.product-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-price {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.product-price p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.add-to-cart {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

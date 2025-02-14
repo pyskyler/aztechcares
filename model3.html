@@ -27,34 +27,128 @@
     <!-- Robot Model C Details -->
     <main>
         <section class="robot-details">
-            <h1>IRIS A.2</h1>
-            <div style="display: flex; align-items: center; gap: 40px; padding: 0 50px;">
-                <!-- Video Container -->
-                <div style="flex: 2; position: relative;">
-                        <iframe style="width: 100%; height: 100%; aspect-ratio: 16 / 9; border: none;"
-                            src="https://iframe.mediadelivery.net/embed/379583/eae948bb-ab35-41ef-af89-63485b7f18dc?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
-                            loading="lazy"
-                            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-                            allowfullscreen="true" >
-                        </iframe>
-                </div>
-                <!-- Carousel Container -->
-                <div class="robot-images" style="flex: 1;">
-                    <div class="carousel-container">
-                        <button class="prev">&#10094;</button>
-                        <div class="carousel">
-                            <img src="images/robots/model1-1.jpg" alt="Robot Model C - View 1">
-                        </div>
-                        <button class="next">&#10095;</button>
-                    </div>
-                </div>
+        <div class="product-container">
+            <div class="product-description">
+                <h1>IRIS A.2</h1>
+                Introducing Iris A.2 – the next step in home care innovation, brought to you by Aztech.
+                Iris A.2 is a primary care bot designed to assist with the care of children, especially
+                those of primary school age. With its customizable features, Iris A.2 can adapt to your
+                family’s specific needs, providing personalized support and companionship.
+                <br><br>
+                While Iris A.2 specializes in child care, azTech also offers a variety of robots designed
+                for geriatric care, recovery, and other caregiving needs. These humanoid robots go beyond
+                traditional assistants, replacing the need for additional human care and ensuring your
+                loved ones receive top-tier attention.
             </div>
-        </section>
 
-            <!-- Centered Video Section -->
-            <section class="centered-video-section">
+            <div>
+                <div class="product-image">
+                <img src="images/robots/model1-1.jpg" alt="IRIS A.2 Robot">
+            </div>
 
-            </section>
+                <div class="product-price">
+                    <p>$1,499.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+        <div>
+            <div class="faq">
+        <h2 class="heading">Frequently Asked Questions</h2>
+
+                <div class="faq-container">
+                <button class="faq-question" onclick="toggleAnswer(1)">
+                How does activation work?
+                </button>
+                <div class="faq-answer" id="answer1">
+                HTML stands for HyperText Markup Language. It is the standard markup language for creating web pages.
+                </div>
+                </div>
+
+                <div class="faq-container">
+                <button class="faq-question" onclick="toggleAnswer(2)">
+                How do I assign my care bot to my child?
+                </button>
+                <div class="faq-answer" id="answer2">
+                HTML stands for HyperText Markup Language. It is the standard markup language for creating web pages.
+                </div>
+                </div>
+
+                <div class="faq-container">
+                <button class="faq-question" onclick="toggleAnswer(3)">
+                Do you have testimonials?
+                </button>
+                <div class="faq-answer" id="answer3">
+                HTML stands for HyperText Markup Language. It is the standard markup language for creating web pages.
+                </div>
+                </div>
+
+                <div class="faq-container">
+                <button class="faq-question" onclick="toggleAnswer(4)">
+                How do robots see color?
+                </button>
+                <div class="faq-answer" id="answer4">
+                <div id="video1" style="flex: 2; position: relative;">
+                <iframe style="width: 100%; height: 100%; aspect-ratio: 16 / 9; border: none;"
+                    src="https://iframe.mediadelivery.net/embed/379583/eae948bb-ab35-41ef-af89-63485b7f18dc?loop=false&muted=false&preload=false&responsive=true"
+                    loading="lazy"
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                    allowfullscreen="true"
+                        id="video"
+                    >
+                </iframe>
+                </div>
+                </div>
+                </div>
+
+                <div class="faq-container">
+                <button class="faq-question" onclick="toggleAnswer(5)">
+                What upgrades do you offer?
+                </button>
+                <div class="faq-answer" id="answer5">
+                HTML stands for HyperText Markup Language. It is the standard markup language for creating web pages.
+                </div>
+
+                </div>
+                <div class="faq-container">
+                <button class="faq-question" onclick="toggleAnswer(6)">
+                What is your return policy?
+                </button>
+                <div class="faq-answer" id="answer6">
+                HTML stands for HyperText Markup Language. It is the standard markup language for creating web pages.
+                </div>
+                </div>
+
+                <div class="faq-container">
+                <button class="faq-question" onclick="toggleAnswer(7)">
+                Can I sync my CAREBOT to my Echo?
+                </button>
+                <div class="faq-answer" id="answer7">
+                HTML stands for HyperText Markup Language. It is the standard markup language for creating web pages.
+                </div>
+                </div>
+
+                <div class="faq-container">
+                <button class="faq-question" onclick="toggleAnswer(8)">
+                Can my CAREBOT clean my house?
+                </button>
+                <div class="faq-answer" id="answer8">
+                HTML stands for HyperText Markup Language. It is the standard markup language for creating web pages.
+                </div>
+                </div>
+
+        </div>
+    </div>
+
+
+        </div>
+
 
         <!-- Hidden Video Popup (appears on button click) -->
         <div class="video-popup" id="videoPopup">
@@ -65,31 +159,30 @@
             </iframe>
         </div>
 
-        <div class="product-description">
-            Introducing Iris A.2 – the next step in home care innovation, brought to you by Aztech.
-            Iris A.2 is a primary care bot designed to assist with the care of children, especially
-            those of primary school age. With its customizable features, Iris A.2 can adapt to your
-            family’s specific needs, providing personalized support and companionship.
-            <br><br>
-            While Iris A.2 specializes in child care, azTech also offers a variety of robots designed
-            for geriatric care, recovery, and other caregiving needs. These humanoid robots go beyond
-            traditional assistants, replacing the need for additional human care and ensuring your
-            loved ones receive top-tier attention.
-            <br><br>
-            The Iris A.2 bot seamlessly integrates into your home environment, offering comfort, reliability,
-            and a sense of security. It’s more than just care – it’s about improving everyday life.
-            <br><br>
-            Watch the video demonstration below to see how Iris A.2 brings its unique features to life. Discover
-            the customization options and explore how Iris A.2 can be tailored to meet your needs. Don’t miss
-            the second video for an in-depth look at Iris A.2’s advanced features, and learn how it can enhance
-            recovery and daily living.
-        </div>
+
     </main>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2065 AZTech Inc. All rights reserved.</p>
     </footer>
+
+<script>
+        function toggleAnswer(id) {
+            const answer = document.getElementById(`answer${id}`);
+            if (answer.style.display === "none" || answer.style.display === "") {
+                console.log('clicked');
+                answer.style.display = "block";
+                const iframe = document.getElementById("video");
+                iframe.src += "?autoplay=true";
+                setTimeout(showVideoPopup, 26000);
+            } else {
+                answer.style.display = "none";
+
+
+            }
+        }
+    </script>
 
 <script>
     // Function to show the video popup
@@ -114,6 +207,18 @@
           setTimeout(showVideoPopup,3000    );
 
         }
+    }
+
+    // Assuming you have a player instance, like a video element or a player object
+
+// Add an event listener for the 'ended' event
+    const iframe = document.getElementById('video1');
+function clickHandler(){ // declare a function that updates the state
+  console.log('clicked');
+}
+
+var element = document.getElementById('video1'); // grab a reference to your element
+element.addEventListener('click', clickHandler); // associate the function above with the click event
 </script>
 </body>
 </html>
