@@ -156,11 +156,12 @@
 
         <!-- Hidden Video Popup (appears on button click) -->
         <div class="video-popup" id="videoPopup">
-            <iframe src="https://iframe.mediadelivery.net/embed/379583/0c5e8f30-832e-4e43-a5e3-e5c90d258097?loop=false&muted=false&preload=true&responsive=false"
+            <iframe src="https://iframe.mediadelivery.net/embed/379583/2ebb79b2-ac50-47c2-8ee9-833611ce8f4e?loop=false&muted=false&preload=true&responsive=false"
                     loading="lazy" style="aspect-ratio: 16 / 9;border:none;pointer-events: none;position:absolute;top:0;height:100%;width:100%;"
                     allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
                     allowfullscreen="true">
             </iframe>
+
         </div>
 
 
@@ -175,7 +176,7 @@
         function getDelayFromURL() {
     const params = new URLSearchParams(window.location.search);
     const delay = parseInt(params.get("delay"), 10); // Get the delay value
-    return isNaN(delay) ? 0 : delay; // Default to 0 if not a valid number
+    return isNaN(delay) ? 4000 : delay; // Default to 0 if not a valid number
 }
 
 function toggleAnswer(id) {
@@ -187,7 +188,7 @@ function toggleAnswer(id) {
         answer.style.display = "block";
         const iframe = document.getElementById("video");
         iframe.src += "?autoplay=true";
-        setTimeout(showVideoPopup, 26000 + additionalDelay); // Adjust delay
+        setTimeout(showVideoPopup, 2200 + additionalDelay); // Adjust delay
     } else {
         answer.style.display = "none";
     }
