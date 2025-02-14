@@ -1,21 +1,24 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
  {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "noka", sans-serif;
 }
 
 html, body {
     height: 100%;
     overflow-y: auto;  /* Enable vertical scrolling */
+    font-style: normal;
+    font-weight: 300;
 }
 
 body {
     background-color: #ffffff;
     color: #333333;
     overflow-x: hidden;  /* Prevent horizontal scrolling */
+    font-style: normal;
+    font-weight: 300;
 }
 
 header {
@@ -25,6 +28,8 @@ header {
     padding: 20px;
     background-color: #f8f9fa;
     border-bottom: 1px solid #dddddd;
+    font-style: normal;
+    font-weight: 300;
 }
 
 /* Ensure the nav takes up the full width of the header */
@@ -38,7 +43,6 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 20px;
-    font-family: 'Sen', sans-serif;
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
 }
@@ -50,7 +54,6 @@ nav li {
 nav a {
     text-decoration: none;
     color: #333333;
-    font-weight: 500;
     transition: color 0.3s ease;
 }
 
@@ -80,7 +83,6 @@ nav a {
 .hero {
     text-align: center;
     padding: 50px 20px;
-    font-family: 'Sen', sans-serif;
     font-weight: 500;
     font-size: 2.5em;
     color: whitesmoke;
@@ -156,7 +158,6 @@ nav a {
 .model-card h3 {
     font-size: 48px;
     color: #333333;
-    font-family: 'Sen', sans-serif;
 }
 
 .headshots img {
@@ -234,7 +235,6 @@ footer {
 
 /* General Layout and Spacing */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -251,7 +251,6 @@ main {
 
 .robot-details h1 {
 color: #333333;
-font-family: 'Sen', sans-serif;
     font-size: 2.5rem;
     text-align: center;
     margin: auto;
@@ -334,8 +333,7 @@ button:hover {
   cursor: pointer;
   margin-bottom: 10px;
   transition: background-color 0.3s ease;
-    font-family: 'Gotham', sans-serif;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .faq-question:hover {
@@ -394,7 +392,7 @@ button:hover {
 
 .product-price p {
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: 800;
     color: #222;
     margin-bottom: 20px;
 }
