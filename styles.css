@@ -391,8 +391,42 @@ button:hover {
     transition: background-color 0.3s ease;
 }
 
+.product-left {
+    flex: 1;
+}
+
 .add-to-cart:hover {
     background-color: #0056b3;
+}
+
+.quantity-selector {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.quantity-selector label {
+    font-size: 1.1rem;
+    margin-right: 10px;
+    color: #555;
+}
+
+.quantity-selector input {
+    width: 60px;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.quantity-selector input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.more {
+    color: gray;
 }
 
 @keyframes fadeIn {
