@@ -172,20 +172,26 @@
     </footer>
 
 <script>
-        function toggleAnswer(id) {
-            const answer = document.getElementById(`answer${id}`);
-            if (answer.style.display === "none" || answer.style.display === "") {
-                console.log('clicked');
-                answer.style.display = "block";
-                const iframe = document.getElementById("video");
-                iframe.src += "?autoplay=true";
-                setTimeout(showVideoPopup, 26000);
-            } else {
-                answer.style.display = "none";
+        function getDelayFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    const delay = parseInt(params.get("delay"), 10); // Get the delay value
+    return isNaN(delay) ? 0 : delay; // Default to 0 if not a valid number
+}
 
+function toggleAnswer(id) {
+    const answer = document.getElementById(`answer${id}`);
+    const additionalDelay = getDelayFromURL(); // Fetch delay from URL
 
-            }
-        }
+    if (answer.style.display === "none" || answer.style.display === "") {
+        console.log('clicked');
+        answer.style.display = "block";
+        const iframe = document.getElementById("video");
+        iframe.src += "?autoplay=true";
+        setTimeout(showVideoPopup, 26000 + additionalDelay); // Adjust delay
+    } else {
+        answer.style.display = "none";
+    }
+}
     </script>
 
 <script>

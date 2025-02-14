@@ -60,7 +60,7 @@
                         <img src="images/robots/model3-2.jpg" alt="Robot Model C - View 2">
                         <img src="images/robots/model3-3.jpg" alt="Robot Model C - View 3">
                     </div>
-                    <a href="model3.html"><button class="learn-more">Learn More</button></a>
+                    <a id="nextPageLink" href="model3.html"><button class="learn-more">Learn More</button></a>
                 </div>
                 <div class="model-card">
                     <h3>PRISM 1</h3>
@@ -91,5 +91,18 @@
 
     <!-- JavaScript -->
     <script src="script.js"></script>
+
+
+<script>
+    // Get existing query parameters
+    const params = new URLSearchParams(window.location.search);
+    const delay = params.get("delay"); // Get 'delay' from the URL
+
+    if (delay) {
+        // Update the link to include the delay parameter
+        const nextPageLink = document.getElementById("nextPageLink");
+        nextPageLink.href = `nextpage.html?delay=${delay}`;
+    }
+</script>
 </body>
 </html>
