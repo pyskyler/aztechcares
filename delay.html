@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Delay and Go to Index</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 8px;
+            width: 200px;
+            margin: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Enter Delay in Milliseconds</h2>
+    <p>1000ms = 1 second</p>
+    <p>This will be the amount of time waited after the end of the video</p>
+
+    <input type="number" id="delayInput" placeholder="Enter delay in ms">
+    <button onclick="goToIndex()">Go to Index</button>
+
+    <script>
+        function goToIndex() {
+            const delay = document.getElementById("delayInput").value;
+            if (delay === "" || isNaN(delay) || delay < 0) {
+                alert("Please enter a valid delay (milliseconds).");
+                return;
+            }
+            window.location.href = `index.html?delay=${delay}`;
+        }
+    </script>
+
+</body>
+</html>
